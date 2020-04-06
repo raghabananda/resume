@@ -19,13 +19,12 @@ function InsertData(model) {
     //page load
   })
 
-  $('#ContactMeForm').on("submit",function(e){
-    e.preventDefault();
+  $('#ContactMeForm').on("submit",async function(e){   
+    e.preventDefault();    
     var model={};
     $(this).serializeArray().map(x=>model[x.name]=x.value);
     console.log(model);
     $('#myModal').modal();
     InsertData(model);
-    $(this).trigger("reset");
-    
+    $(this).trigger("reset");    
   })
