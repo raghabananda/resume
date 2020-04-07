@@ -26,5 +26,7 @@ function InsertData(model) {
     console.log(model);
     $('#myModal').modal();
     InsertData(model);
-    $(this).trigger("reset");    
+    $(this).trigger("reset"); 
+    swal("Thanks for contacting me.I will be in touch with you soon.");   
+    //location.reload();
   })
